@@ -1,0 +1,18 @@
+student = {
+    id:1,
+    name:x
+    class:a,
+    sub: [
+        {subName:a, grade:10},
+        ....
+    ]
+}
+student => id, name, class in[a,b,c ]
+
+add subject =>{subName:x, subgrage:50},....
+
+add new student                 => done 
+add subject to student          => done 
+get all students                => done 
+get single student by student id => done 
+get students total degrees       => 

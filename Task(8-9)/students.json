@@ -1,0 +1,36 @@
+[{
+    "id": 1,
+    "name": "layan",
+    "class": "b",
+    "sub": [{
+        "subName": "arabic",
+        "grade": 10
+    }, {
+        "subName": "english",
+        "grade": 20
+    }]
+}, {
+    "id": 2,
+    "name": "reem",
+    "class": "a",
+    "sub": [{
+        "subName": "arabic",
+        "grade": 5
+    }]
+}, {
+    "id": 3,
+    "name": "mazen",
+    "class": "c",
+    "sub": [{
+        "subName": "arabic",
+        "grade": 8
+    }]
+}, {
+    "id": 4,
+    "name": "ahmed",
+    "class": "b",
+    "sub": [{
+        "subName": "cdd",
+        "grade": 10
+    }]
+}]
