@@ -6,7 +6,7 @@ const yargs = require('yargs')
 // students.showAllStudents();
 // console.log(getStudent(1)) ;
 // students.addSubject(1, {"subName": "english","grade": 20}) ;
-// students.studentsDegress() ;
+ console.log(students.calcStudentsDegress())
 
 
 
@@ -83,6 +83,4 @@ yargs.command({
         students.studentsDegress()
     }
 })
-
-
 yargs.argv

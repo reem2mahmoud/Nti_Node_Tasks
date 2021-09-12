@@ -66,27 +66,29 @@ addSubject= (student_id , new_subject)=>{
             subject_found = true  ; 
         }
     })
-    if(subject_found){
+    if(subject_found){``
         console.log(chalk.red(`Oobs ,this subject added before to ${result.student.name}`)) ;
-    } else{
+    }else{
         students[result.index].sub.push(new_subject) ;
         writeStudentData(students) ;
     }
 }
 //StudentsTotalDegree
-studentsDegress = ()=>{
-    let total_degree = 0 ;
+calcStudentsDegress = ()=>{
     let students = readStudentsData();
-     students.forEach(student => {
-         return student.sub.forEach(subject=>{
-            console.log('degree',subject.grade);
-            //total_degree = total_degree + subject.grade
-           return  total_degree += subject.grade;
-        })  
+    let degrees = [] ;
+     students.forEach(student =>{
+        let student_grades  = 0;
+         student.sub.forEach(subject=>{
+            student_grades+=subject.grade ;
+        })
+        degrees.push({"name" : student.name , "total_degree" : student_grades})
     })
+    return degrees ;
 }
+
 module.exports={ addNewStudent , 
                  showAllStudents  ,
                  getStudent ,
                  addSubject,
-                 studentsDegress}
+                 calcStudentsDegress}

@@ -30,7 +30,11 @@
     "name": "ahmed",
     "class": "b",
     "sub": [{
-        "subName": "cdd",
+        "subName": "english",
+        "grade": 10
+    },
+    {
+        "subName": "arabic",
         "grade": 10
     }]
 }]
