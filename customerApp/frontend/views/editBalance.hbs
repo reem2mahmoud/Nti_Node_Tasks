@@ -1,0 +1,12 @@
+{{>header}}
+{{>navbar}}
+ <form method="get">
+           <div class=" text-center input-group m-5">
+              <input type="number" name="balance" class="form-control m-5" placeholder="edit balance" 
+                 id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+               {{!-- <button type="submit" class="btn btn-primary">Add Balance</button> --}}
+              <a href="/add_balance/{{id}}" class="btn btn-primary m-1" target="">Add Balance</a>
+              <a href="/withdraw-balance/{{id}}" class="btn btn-primary m-1">withdraw Balance</a> 
+           </div>
+     </form>
+{{>footer}}
