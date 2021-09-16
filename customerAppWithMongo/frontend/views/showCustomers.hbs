@@ -1,0 +1,44 @@
+{{>header}}
+{{>navbar}}
+<section class="container my-3">
+    <div class="text-center my-5">
+        <form method="get" action='/' class="row">
+           <div class="input-group">
+              <input type="text" name="accNum" class="form-control" placeholder="search customer" 
+                 id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+             <input type="submit" value="Submit">
+              
+           </div>
+        </form>
+    </div>
+    <div class="my-5">
+        <table class="table table-stripped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>name</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each data}}
+                <tr>
+                    <td>{{this.id}}</td>
+                    <td>{{this.name}}</td>
+                    <td>
+                        <a href="/edit/{{this._id}}" class="btn btn-warning m-1">Edit Customer</a>
+                        <a href="/editBalance/{{this._id}}" class="btn btn-warning m-1">Edit Balance</a>
+                        {{#if this.status}}
+                        <a href="/activate/{{this._id}}" class="btn btn-danger m-1">deActivate</a>
+                        {{/if}}
+                        {{#unless this.status}}
+                        <a href="/activate/{{this._id}}" class="btn btn-danger m-1">Activate</a>
+                        {{/unless}}
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>
+{{>footer}}

@@ -1,0 +1,22 @@
+{{>header}}
+{{>navbar}}
+<div class="container text-center">
+<h1>Add New Customer</h1>
+<form method="post">
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Name</label>
+    <input type="text" class="form-control" name ="name" id="exampleInputName" aria-describedby="emailHelp">
+  </div>
+  
+  <div class="mb-3">
+    <label for="exampleInputAcc" class="form-label">Account Number</label>
+    <input type="number" class="form-control" name="accNum" id="exampleInputAcc">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputAdress" class="form-label">Balance</label>
+    <input type="number" name="balance" class="form-control" id="exampleInputAdress">
+  </div>
+  <button type="submit" class="btn btn-primary">Add Customer</button>
+</form>
+</div>
+{{>footer}}
